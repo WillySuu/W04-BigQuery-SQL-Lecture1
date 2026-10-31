@@ -82,7 +82,7 @@ WHERE _TABLE_SUFFIX BETWEEN '20201201' AND '20201231';
 
 ### Query 5 Result
 
-\![(images/query5.png)
+![](images/query5.png)
 
 **Result:** 1,612,725 events.
 
