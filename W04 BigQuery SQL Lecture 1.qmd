@@ -36,7 +36,7 @@ LIMIT 50;
 
 ### Query 2 Result
 
-![Query 2 Result](images/query2.png)
+![](images/query2.png)
 
 ## Query 3: Sort Purchase Events
 
@@ -50,6 +50,10 @@ ORDER BY event_timestamp DESC
 LIMIT 20;
 ```
 
+### Query 3 Result
+
+![](images/query3.png)
+
 ## Query 4: Convert Timestamps
 
 This query converts event timestamps into readable dates and times.
@@ -62,6 +66,10 @@ ORDER BY event_timestamp DESC
 LIMIT 10;
 ```
 
+### Query 4 Result
+
+![](images/query4.png)
+
 ## Query 5: Count Total Events
 
 This query counts all events recorded in December 2020.
@@ -71,6 +79,10 @@ SELECT COUNT(*) AS event_count
 FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`
 WHERE _TABLE_SUFFIX BETWEEN '20201201' AND '20201231';
 ```
+
+### Query 5 Result
+
+\![(images/query5.png)
 
 **Result:** 1,612,725 events.
 
@@ -84,6 +96,10 @@ FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`
 WHERE event_name = 'purchase'
   AND _TABLE_SUFFIX BETWEEN '20201201' AND '20201231';
 ```
+
+### Query 6 Result
+
+![](images/query6.png)
 
 **Result:** 2,434 purchase events.
 
@@ -99,6 +115,10 @@ GROUP BY event_date
 ORDER BY event_date;
 ```
 
+### Query 7 Result
+
+![](images/query7.png)
+
 ## Query 8: Most Common Event Types
 
 This query identifies the 15 most frequent event types in December 2020.
@@ -112,7 +132,9 @@ ORDER BY events DESC
 LIMIT 15;
 ```
 
-The most common event was page_view, followed by user_engagement and scroll.
+### Query 8 Result
+
+![](images/query8.png)
 
 ## Query 9: Events with at Least 50,000 Records
 
@@ -127,6 +149,10 @@ HAVING COUNT(*) >= 50000
 ORDER BY events DESC;
 ```
 
+### Query 9 Result
+
+![](images/query9.png)
+
 ## Query 10: Wildcard Tables and Date Filtering
 
 This query uses wildcard tables and \_TABLE_SUFFIX to analyze daily event counts during the first week of December 2020.
@@ -138,6 +164,10 @@ WHERE _TABLE_SUFFIX BETWEEN '20201201' AND '20201207'
 GROUP BY event_date
 ORDER BY event_date;
 ```
+
+### Query 10 Result
+
+![](images/query10.png)
 
 ## GitHub Links
 
